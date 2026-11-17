@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Intelligent Loan Approval & Credit Risk Prediction System
 
 An academic, reproducible machine-learning decision-support prototype with
@@ -586,3 +587,7 @@ resolve from the project root, not the current working directory.
 - [Explainability report](reports/explainability_report.md)
 - [Business insights and limitations](reports/business_insights.md)
 - Lending policy configuration: `config/lending_policy.yaml`
+=======
+# IntelligentLoanApproval-RiskPredictionSystem_AlchemistDigitalSolution
+Academic ML prototype for loan approval prediction and credit risk assessment — featuring a historical Loan_Status classifier, an independent LendingClub default-risk model, and a rule-based Lending Decision Engine with Streamlit UI. Not for production lending decisions.
+>>>>>>> 11e618c73a8a8790392f7810d37fb2d0ef55df01
