@@ -1,0 +1,1725 @@
+{
+  "source_url": "https://www.kaggle.com/datasets/wordsforthewise/lending-club",
+  "dataset_file": "accepted_2007_to_2018Q4.csv.gz",
+  "dataset_version": 3,
+  "dataset_last_updated": "2019-04-10",
+  "dataset_license": "CC0: Public Domain (as declared on Kaggle)",
+  "acquisition_date": null,
+  "local_file_modified_utc": "2026-11-15T11:50:34.520148+00:00",
+  "file_size_bytes": 392582231,
+  "sha256": "55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d",
+  "audit_timestamp_utc": "2026-11-15T12:54:44.243968+00:00",
+  "row_count": 2260701,
+  "column_count": 151,
+  "columns": [
+    "id",
+    "member_id",
+    "loan_amnt",
+    "funded_amnt",
+    "funded_amnt_inv",
+    "term",
+    "int_rate",
+    "installment",
+    "grade",
+    "sub_grade",
+    "emp_title",
+    "emp_length",
+    "home_ownership",
+    "annual_inc",
+    "verification_status",
+    "issue_d",
+    "loan_status",
+    "pymnt_plan",
+    "url",
+    "desc",
+    "purpose",
+    "title",
+    "zip_code",
+    "addr_state",
+    "dti",
+    "delinq_2yrs",
+    "earliest_cr_line",
+    "fico_range_low",
+    "fico_range_high",
+    "inq_last_6mths",
+    "mths_since_last_delinq",
+    "mths_since_last_record",
+    "open_acc",
+    "pub_rec",
+    "revol_bal",
+    "revol_util",
+    "total_acc",
+    "initial_list_status",
+    "out_prncp",
+    "out_prncp_inv",
+    "total_pymnt",
+    "total_pymnt_inv",
+    "total_rec_prncp",
+    "total_rec_int",
+    "total_rec_late_fee",
+    "recoveries",
+    "collection_recovery_fee",
+    "last_pymnt_d",
+    "last_pymnt_amnt",
+    "next_pymnt_d",
+    "last_credit_pull_d",
+    "last_fico_range_high",
+    "last_fico_range_low",
+    "collections_12_mths_ex_med",
+    "mths_since_last_major_derog",
+    "policy_code",
+    "application_type",
+    "annual_inc_joint",
+    "dti_joint",
+    "verification_status_joint",
+    "acc_now_delinq",
+    "tot_coll_amt",
+    "tot_cur_bal",
+    "open_acc_6m",
+    "open_act_il",
+    "open_il_12m",
+    "open_il_24m",
+    "mths_since_rcnt_il",
+    "total_bal_il",
+    "il_util",
+    "open_rv_12m",
+    "open_rv_24m",
+    "max_bal_bc",
+    "all_util",
+    "total_rev_hi_lim",
+    "inq_fi",
+    "total_cu_tl",
+    "inq_last_12m",
+    "acc_open_past_24mths",
+    "avg_cur_bal",
+    "bc_open_to_buy",
+    "bc_util",
+    "chargeoff_within_12_mths",
+    "delinq_amnt",
+    "mo_sin_old_il_acct",
+    "mo_sin_old_rev_tl_op",
+    "mo_sin_rcnt_rev_tl_op",
+    "mo_sin_rcnt_tl",
+    "mort_acc",
+    "mths_since_recent_bc",
+    "mths_since_recent_bc_dlq",
+    "mths_since_recent_inq",
+    "mths_since_recent_revol_delinq",
+    "num_accts_ever_120_pd",
+    "num_actv_bc_tl",
+    "num_actv_rev_tl",
+    "num_bc_sats",
+    "num_bc_tl",
+    "num_il_tl",
+    "num_op_rev_tl",
+    "num_rev_accts",
+    "num_rev_tl_bal_gt_0",
+    "num_sats",
+    "num_tl_120dpd_2m",
+    "num_tl_30dpd",
+    "num_tl_90g_dpd_24m",
+    "num_tl_op_past_12m",
+    "pct_tl_nvr_dlq",
+    "percent_bc_gt_75",
+    "pub_rec_bankruptcies",
+    "tax_liens",
+    "tot_hi_cred_lim",
+    "total_bal_ex_mort",
+    "total_bc_limit",
+    "total_il_high_credit_limit",
+    "revol_bal_joint",
+    "sec_app_fico_range_low",
+    "sec_app_fico_range_high",
+    "sec_app_earliest_cr_line",
+    "sec_app_inq_last_6mths",
+    "sec_app_mort_acc",
+    "sec_app_open_acc",
+    "sec_app_revol_util",
+    "sec_app_open_act_il",
+    "sec_app_num_rev_accts",
+    "sec_app_chargeoff_within_12_mths",
+    "sec_app_collections_12_mths_ex_med",
+    "sec_app_mths_since_last_major_derog",
+    "hardship_flag",
+    "hardship_type",
+    "hardship_reason",
+    "hardship_status",
+    "deferral_term",
+    "hardship_amount",
+    "hardship_start_date",
+    "hardship_end_date",
+    "payment_plan_start_date",
+    "hardship_length",
+    "hardship_dpd",
+    "hardship_loan_status",
+    "orig_projected_additional_accrued_interest",
+    "hardship_payoff_balance_amount",
+    "hardship_last_payment_amount",
+    "disbursement_method",
+    "debt_settlement_flag",
+    "debt_settlement_flag_date",
+    "settlement_status",
+    "settlement_date",
+    "settlement_amount",
+    "settlement_percentage",
+    "settlement_term"
+  ],
+  "missing_values": {
+    "acc_now_delinq": 62,
+    "acc_open_past_24mths": 50063,
+    "addr_state": 33,
+    "all_util": 866381,
+    "annual_inc": 37,
+    "annual_inc_joint": 2139991,
+    "application_type": 33,
+    "avg_cur_bal": 70379,
+    "bc_open_to_buy": 74968,
+    "bc_util": 76104,
+    "chargeoff_within_12_mths": 178,
+    "collection_recovery_fee": 33,
+    "collections_12_mths_ex_med": 178,
+    "debt_settlement_flag": 33,
+    "debt_settlement_flag_date": 2226455,
+    "deferral_term": 2249784,
+    "delinq_2yrs": 62,
+    "delinq_amnt": 62,
+    "desc": 2134636,
+    "disbursement_method": 33,
+    "dti": 1744,
+    "dti_joint": 2139995,
+    "earliest_cr_line": 62,
+    "emp_length": 146940,
+    "emp_title": 167002,
+    "fico_range_high": 33,
+    "fico_range_low": 33,
+    "funded_amnt": 33,
+    "funded_amnt_inv": 33,
+    "grade": 33,
+    "hardship_amount": 2249784,
+    "hardship_dpd": 2249784,
+    "hardship_end_date": 2249784,
+    "hardship_flag": 33,
+    "hardship_last_payment_amount": 2249784,
+    "hardship_length": 2249784,
+    "hardship_loan_status": 2249784,
+    "hardship_payoff_balance_amount": 2249784,
+    "hardship_reason": 2249784,
+    "hardship_start_date": 2249784,
+    "hardship_status": 2249784,
+    "hardship_type": 2249784,
+    "home_ownership": 33,
+    "id": 0,
+    "il_util": 1068883,
+    "initial_list_status": 33,
+    "inq_fi": 866162,
+    "inq_last_12m": 866163,
+    "inq_last_6mths": 63,
+    "installment": 33,
+    "int_rate": 33,
+    "issue_d": 33,
+    "last_credit_pull_d": 105,
+    "last_fico_range_high": 33,
+    "last_fico_range_low": 33,
+    "last_pymnt_amnt": 33,
+    "last_pymnt_d": 2460,
+    "loan_amnt": 33,
+    "loan_status": 33,
+    "max_bal_bc": 866162,
+    "member_id": 2260701,
+    "mo_sin_old_il_acct": 139104,
+    "mo_sin_old_rev_tl_op": 70310,
+    "mo_sin_rcnt_rev_tl_op": 70310,
+    "mo_sin_rcnt_tl": 70309,
+    "mort_acc": 50063,
+    "mths_since_last_delinq": 1158535,
+    "mths_since_last_major_derog": 1679926,
+    "mths_since_last_record": 1901545,
+    "mths_since_rcnt_il": 909957,
+    "mths_since_recent_bc": 73445,
+    "mths_since_recent_bc_dlq": 1741000,
+    "mths_since_recent_inq": 295468,
+    "mths_since_recent_revol_delinq": 1520342,
+    "next_pymnt_d": 1345343,
+    "num_accts_ever_120_pd": 70309,
+    "num_actv_bc_tl": 70309,
+    "num_actv_rev_tl": 70309,
+    "num_bc_sats": 58623,
+    "num_bc_tl": 70309,
+    "num_il_tl": 70309,
+    "num_op_rev_tl": 70309,
+    "num_rev_accts": 70310,
+    "num_rev_tl_bal_gt_0": 70309,
+    "num_sats": 58623,
+    "num_tl_120dpd_2m": 153690,
+    "num_tl_30dpd": 70309,
+    "num_tl_90g_dpd_24m": 70309,
+    "num_tl_op_past_12m": 70309,
+    "open_acc": 62,
+    "open_acc_6m": 866163,
+    "open_act_il": 866162,
+    "open_il_12m": 866162,
+    "open_il_24m": 866162,
+    "open_rv_12m": 866162,
+    "open_rv_24m": 866162,
+    "orig_projected_additional_accrued_interest": 2252050,
+    "out_prncp": 33,
+    "out_prncp_inv": 33,
+    "payment_plan_start_date": 2249784,
+    "pct_tl_nvr_dlq": 70464,
+    "percent_bc_gt_75": 75412,
+    "policy_code": 33,
+    "pub_rec": 62,
+    "pub_rec_bankruptcies": 1398,
+    "purpose": 33,
+    "pymnt_plan": 33,
+    "recoveries": 33,
+    "revol_bal": 33,
+    "revol_bal_joint": 2152681,
+    "revol_util": 1835,
+    "sec_app_chargeoff_within_12_mths": 2152680,
+    "sec_app_collections_12_mths_ex_med": 2152680,
+    "sec_app_earliest_cr_line": 2152680,
+    "sec_app_fico_range_high": 2152680,
+    "sec_app_fico_range_low": 2152680,
+    "sec_app_inq_last_6mths": 2152680,
+    "sec_app_mort_acc": 2152680,
+    "sec_app_mths_since_last_major_derog": 2224759,
+    "sec_app_num_rev_accts": 2152680,
+    "sec_app_open_acc": 2152680,
+    "sec_app_open_act_il": 2152680,
+    "sec_app_revol_util": 2154517,
+    "settlement_amount": 2226455,
+    "settlement_date": 2226455,
+    "settlement_percentage": 2226455,
+    "settlement_status": 2226455,
+    "settlement_term": 2226455,
+    "sub_grade": 33,
+    "tax_liens": 138,
+    "term": 33,
+    "title": 23359,
+    "tot_coll_amt": 70309,
+    "tot_cur_bal": 70309,
+    "tot_hi_cred_lim": 70309,
+    "total_acc": 62,
+    "total_bal_ex_mort": 50063,
+    "total_bal_il": 866162,
+    "total_bc_limit": 50063,
+    "total_cu_tl": 866163,
+    "total_il_high_credit_limit": 70309,
+    "total_pymnt": 33,
+    "total_pymnt_inv": 33,
+    "total_rec_int": 33,
+    "total_rec_late_fee": 33,
+    "total_rec_prncp": 33,
+    "total_rev_hi_lim": 70309,
+    "url": 33,
+    "verification_status": 33,
+    "verification_status_joint": 2144971,
+    "zip_code": 34
+  },
+  "loan_status_counts": {
+    "<MISSING>": 33,
+    "Charged Off": 268559,
+    "Current": 878317,
+    "Default": 40,
+    "Does not meet the credit policy. Status:Charged Off": 761,
+    "Does not meet the credit policy. Status:Fully Paid": 1988,
+    "Fully Paid": 1076751,
+    "In Grace Period": 8436,
+    "Late (16-30 days)": 4349,
+    "Late (31-120 days)": 21467
+  },
+  "resolved_target_rows": 1345310,
+  "target_class_counts": {
+    "default": 268559,
+    "non_default": 1076751
+  },
+  "unresolved_rows_excluded": 915358,
+  "malformed_summary_rows_excluded": 33,
+  "duplicate_id_count": 0,
+  "unique_id_count": 2260701,
+  "issue_date_start": "2007-06",
+  "issue_date_end": "2018-12",
+  "monthly_target_counts": [
+    {
+      "issue_month": "Apr-2008",
+      "loan_status": "Charged Off",
+      "count": 27
+    },
+    {
+      "issue_month": "Apr-2008",
+      "loan_status": "Fully Paid",
+      "count": 128
+    },
+    {
+      "issue_month": "Apr-2009",
+      "loan_status": "Charged Off",
+      "count": 40
+    },
+    {
+      "issue_month": "Apr-2009",
+      "loan_status": "Fully Paid",
+      "count": 250
+    },
+    {
+      "issue_month": "Apr-2010",
+      "loan_status": "Charged Off",
+      "count": 82
+    },
+    {
+      "issue_month": "Apr-2010",
+      "loan_status": "Fully Paid",
+      "count": 745
+    },
+    {
+      "issue_month": "Apr-2011",
+      "loan_status": "Charged Off",
+      "count": 222
+    },
+    {
+      "issue_month": "Apr-2011",
+      "loan_status": "Fully Paid",
+      "count": 1341
+    },
+    {
+      "issue_month": "Apr-2012",
+      "loan_status": "Charged Off",
+      "count": 496
+    },
+    {
+      "issue_month": "Apr-2012",
+      "loan_status": "Fully Paid",
+      "count": 2734
+    },
+    {
+      "issue_month": "Apr-2013",
+      "loan_status": "Charged Off",
+      "count": 1504
+    },
+    {
+      "issue_month": "Apr-2013",
+      "loan_status": "Fully Paid",
+      "count": 7915
+    },
+    {
+      "issue_month": "Apr-2014",
+      "loan_status": "Charged Off",
+      "count": 3320
+    },
+    {
+      "issue_month": "Apr-2014",
+      "loan_status": "Fully Paid",
+      "count": 14852
+    },
+    {
+      "issue_month": "Apr-2015",
+      "loan_status": "Charged Off",
+      "count": 6509
+    },
+    {
+      "issue_month": "Apr-2015",
+      "loan_status": "Fully Paid",
+      "count": 25276
+    },
+    {
+      "issue_month": "Apr-2016",
+      "loan_status": "Charged Off",
+      "count": 6173
+    },
+    {
+      "issue_month": "Apr-2016",
+      "loan_status": "Fully Paid",
+      "count": 17931
+    },
+    {
+      "issue_month": "Apr-2017",
+      "loan_status": "Charged Off",
+      "count": 3118
+    },
+    {
+      "issue_month": "Apr-2017",
+      "loan_status": "Fully Paid",
+      "count": 9985
+    },
+    {
+      "issue_month": "Apr-2018",
+      "loan_status": "Charged Off",
+      "count": 1362
+    },
+    {
+      "issue_month": "Apr-2018",
+      "loan_status": "Fully Paid",
+      "count": 5562
+    },
+    {
+      "issue_month": "Aug-2007",
+      "loan_status": "Charged Off",
+      "count": 7
+    },
+    {
+      "issue_month": "Aug-2007",
+      "loan_status": "Fully Paid",
+      "count": 26
+    },
+    {
+      "issue_month": "Aug-2008",
+      "loan_status": "Charged Off",
+      "count": 6
+    },
+    {
+      "issue_month": "Aug-2008",
+      "loan_status": "Fully Paid",
+      "count": 65
+    },
+    {
+      "issue_month": "Aug-2009",
+      "loan_status": "Charged Off",
+      "count": 40
+    },
+    {
+      "issue_month": "Aug-2009",
+      "loan_status": "Fully Paid",
+      "count": 368
+    },
+    {
+      "issue_month": "Aug-2010",
+      "loan_status": "Charged Off",
+      "count": 148
+    },
+    {
+      "issue_month": "Aug-2010",
+      "loan_status": "Fully Paid",
+      "count": 930
+    },
+    {
+      "issue_month": "Aug-2011",
+      "loan_status": "Charged Off",
+      "count": 271
+    },
+    {
+      "issue_month": "Aug-2011",
+      "loan_status": "Fully Paid",
+      "count": 1663
+    },
+    {
+      "issue_month": "Aug-2012",
+      "loan_status": "Charged Off",
+      "count": 884
+    },
+    {
+      "issue_month": "Aug-2012",
+      "loan_status": "Fully Paid",
+      "count": 4535
+    },
+    {
+      "issue_month": "Aug-2013",
+      "loan_status": "Charged Off",
+      "count": 1941
+    },
+    {
+      "issue_month": "Aug-2013",
+      "loan_status": "Fully Paid",
+      "count": 10733
+    },
+    {
+      "issue_month": "Aug-2014",
+      "loan_status": "Charged Off",
+      "count": 3336
+    },
+    {
+      "issue_month": "Aug-2014",
+      "loan_status": "Fully Paid",
+      "count": 14394
+    },
+    {
+      "issue_month": "Aug-2015",
+      "loan_status": "Charged Off",
+      "count": 6339
+    },
+    {
+      "issue_month": "Aug-2015",
+      "loan_status": "Fully Paid",
+      "count": 25362
+    },
+    {
+      "issue_month": "Aug-2016",
+      "loan_status": "Charged Off",
+      "count": 5822
+    },
+    {
+      "issue_month": "Aug-2016",
+      "loan_status": "Fully Paid",
+      "count": 16436
+    },
+    {
+      "issue_month": "Aug-2017",
+      "loan_status": "Charged Off",
+      "count": 3546
+    },
+    {
+      "issue_month": "Aug-2017",
+      "loan_status": "Fully Paid",
+      "count": 11942
+    },
+    {
+      "issue_month": "Aug-2018",
+      "loan_status": "Charged Off",
+      "count": 315
+    },
+    {
+      "issue_month": "Aug-2018",
+      "loan_status": "Fully Paid",
+      "count": 3254
+    },
+    {
+      "issue_month": "Dec-2007",
+      "loan_status": "Charged Off",
+      "count": 18
+    },
+    {
+      "issue_month": "Dec-2007",
+      "loan_status": "Fully Paid",
+      "count": 67
+    },
+    {
+      "issue_month": "Dec-2008",
+      "loan_status": "Charged Off",
+      "count": 33
+    },
+    {
+      "issue_month": "Dec-2008",
+      "loan_status": "Fully Paid",
+      "count": 190
+    },
+    {
+      "issue_month": "Dec-2009",
+      "loan_status": "Charged Off",
+      "count": 62
+    },
+    {
+      "issue_month": "Dec-2009",
+      "loan_status": "Fully Paid",
+      "count": 536
+    },
+    {
+      "issue_month": "Dec-2010",
+      "loan_status": "Charged Off",
+      "count": 143
+    },
+    {
+      "issue_month": "Dec-2010",
+      "loan_status": "Fully Paid",
+      "count": 1126
+    },
+    {
+      "issue_month": "Dec-2011",
+      "loan_status": "Charged Off",
+      "count": 431
+    },
+    {
+      "issue_month": "Dec-2011",
+      "loan_status": "Fully Paid",
+      "count": 1836
+    },
+    {
+      "issue_month": "Dec-2012",
+      "loan_status": "Charged Off",
+      "count": 916
+    },
+    {
+      "issue_month": "Dec-2012",
+      "loan_status": "Fully Paid",
+      "count": 5150
+    },
+    {
+      "issue_month": "Dec-2013",
+      "loan_status": "Charged Off",
+      "count": 2299
+    },
+    {
+      "issue_month": "Dec-2013",
+      "loan_status": "Fully Paid",
+      "count": 12713
+    },
+    {
+      "issue_month": "Dec-2014",
+      "loan_status": "Charged Off",
+      "count": 1731
+    },
+    {
+      "issue_month": "Dec-2014",
+      "loan_status": "Fully Paid",
+      "count": 7636
+    },
+    {
+      "issue_month": "Dec-2015",
+      "loan_status": "Charged Off",
+      "count": 8136
+    },
+    {
+      "issue_month": "Dec-2015",
+      "loan_status": "Fully Paid",
+      "count": 30866
+    },
+    {
+      "issue_month": "Dec-2016",
+      "loan_status": "Charged Off",
+      "count": 4829
+    },
+    {
+      "issue_month": "Dec-2016",
+      "loan_status": "Fully Paid",
+      "count": 14544
+    },
+    {
+      "issue_month": "Dec-2017",
+      "loan_status": "Charged Off",
+      "count": 2148
+    },
+    {
+      "issue_month": "Dec-2017",
+      "loan_status": "Fully Paid",
+      "count": 7915
+    },
+    {
+      "issue_month": "Dec-2018",
+      "loan_status": "Charged Off",
+      "count": 13
+    },
+    {
+      "issue_month": "Dec-2018",
+      "loan_status": "Fully Paid",
+      "count": 1235
+    },
+    {
+      "issue_month": "Feb-2008",
+      "loan_status": "Charged Off",
+      "count": 25
+    },
+    {
+      "issue_month": "Feb-2008",
+      "loan_status": "Fully Paid",
+      "count": 149
+    },
+    {
+      "issue_month": "Feb-2009",
+      "loan_status": "Charged Off",
+      "count": 34
+    },
+    {
+      "issue_month": "Feb-2009",
+      "loan_status": "Fully Paid",
+      "count": 226
+    },
+    {
+      "issue_month": "Feb-2010",
+      "loan_status": "Charged Off",
+      "count": 63
+    },
+    {
+      "issue_month": "Feb-2010",
+      "loan_status": "Fully Paid",
+      "count": 564
+    },
+    {
+      "issue_month": "Feb-2011",
+      "loan_status": "Charged Off",
+      "count": 169
+    },
+    {
+      "issue_month": "Feb-2011",
+      "loan_status": "Fully Paid",
+      "count": 1129
+    },
+    {
+      "issue_month": "Feb-2012",
+      "loan_status": "Charged Off",
+      "count": 421
+    },
+    {
+      "issue_month": "Feb-2012",
+      "loan_status": "Fully Paid",
+      "count": 2139
+    },
+    {
+      "issue_month": "Feb-2013",
+      "loan_status": "Charged Off",
+      "count": 1160
+    },
+    {
+      "issue_month": "Feb-2013",
+      "loan_status": "Fully Paid",
+      "count": 6401
+    },
+    {
+      "issue_month": "Feb-2014",
+      "loan_status": "Charged Off",
+      "count": 2525
+    },
+    {
+      "issue_month": "Feb-2014",
+      "loan_status": "Fully Paid",
+      "count": 12680
+    },
+    {
+      "issue_month": "Feb-2015",
+      "loan_status": "Charged Off",
+      "count": 4198
+    },
+    {
+      "issue_month": "Feb-2015",
+      "loan_status": "Fully Paid",
+      "count": 17458
+    },
+    {
+      "issue_month": "Feb-2016",
+      "loan_status": "Charged Off",
+      "count": 6734
+    },
+    {
+      "issue_month": "Feb-2016",
+      "loan_status": "Fully Paid",
+      "count": 27865
+    },
+    {
+      "issue_month": "Feb-2017",
+      "loan_status": "Charged Off",
+      "count": 3127
+    },
+    {
+      "issue_month": "Feb-2017",
+      "loan_status": "Fully Paid",
+      "count": 10341
+    },
+    {
+      "issue_month": "Feb-2018",
+      "loan_status": "Charged Off",
+      "count": 1315
+    },
+    {
+      "issue_month": "Feb-2018",
+      "loan_status": "Fully Paid",
+      "count": 5436
+    },
+    {
+      "issue_month": "Jan-2008",
+      "loan_status": "Charged Off",
+      "count": 31
+    },
+    {
+      "issue_month": "Jan-2008",
+      "loan_status": "Fully Paid",
+      "count": 140
+    },
+    {
+      "issue_month": "Jan-2009",
+      "loan_status": "Charged Off",
+      "count": 28
+    },
+    {
+      "issue_month": "Jan-2009",
+      "loan_status": "Fully Paid",
+      "count": 211
+    },
+    {
+      "issue_month": "Jan-2010",
+      "loan_status": "Charged Off",
+      "count": 76
+    },
+    {
+      "issue_month": "Jan-2010",
+      "loan_status": "Fully Paid",
+      "count": 513
+    },
+    {
+      "issue_month": "Jan-2011",
+      "loan_status": "Charged Off",
+      "count": 186
+    },
+    {
+      "issue_month": "Jan-2011",
+      "loan_status": "Fully Paid",
+      "count": 1194
+    },
+    {
+      "issue_month": "Jan-2012",
+      "loan_status": "Charged Off",
+      "count": 440
+    },
+    {
+      "issue_month": "Jan-2012",
+      "loan_status": "Fully Paid",
+      "count": 2162
+    },
+    {
+      "issue_month": "Jan-2013",
+      "loan_status": "Charged Off",
+      "count": 1050
+    },
+    {
+      "issue_month": "Jan-2013",
+      "loan_status": "Fully Paid",
+      "count": 5822
+    },
+    {
+      "issue_month": "Jan-2014",
+      "loan_status": "Charged Off",
+      "count": 2477
+    },
+    {
+      "issue_month": "Jan-2014",
+      "loan_status": "Fully Paid",
+      "count": 13137
+    },
+    {
+      "issue_month": "Jan-2015",
+      "loan_status": "Charged Off",
+      "count": 6458
+    },
+    {
+      "issue_month": "Jan-2015",
+      "loan_status": "Fully Paid",
+      "count": 25758
+    },
+    {
+      "issue_month": "Jan-2016",
+      "loan_status": "Charged Off",
+      "count": 5462
+    },
+    {
+      "issue_month": "Jan-2016",
+      "loan_status": "Fully Paid",
+      "count": 22935
+    },
+    {
+      "issue_month": "Jan-2017",
+      "loan_status": "Charged Off",
+      "count": 3719
+    },
+    {
+      "issue_month": "Jan-2017",
+      "loan_status": "Fully Paid",
+      "count": 12675
+    },
+    {
+      "issue_month": "Jan-2018",
+      "loan_status": "Charged Off",
+      "count": 1672
+    },
+    {
+      "issue_month": "Jan-2018",
+      "loan_status": "Fully Paid",
+      "count": 6926
+    },
+    {
+      "issue_month": "Jul-2007",
+      "loan_status": "Fully Paid",
+      "count": 30
+    },
+    {
+      "issue_month": "Jul-2008",
+      "loan_status": "Charged Off",
+      "count": 17
+    },
+    {
+      "issue_month": "Jul-2008",
+      "loan_status": "Fully Paid",
+      "count": 66
+    },
+    {
+      "issue_month": "Jul-2009",
+      "loan_status": "Charged Off",
+      "count": 47
+    },
+    {
+      "issue_month": "Jul-2009",
+      "loan_status": "Fully Paid",
+      "count": 327
+    },
+    {
+      "issue_month": "Jul-2010",
+      "loan_status": "Charged Off",
+      "count": 137
+    },
+    {
+      "issue_month": "Jul-2010",
+      "loan_status": "Fully Paid",
+      "count": 982
+    },
+    {
+      "issue_month": "Jul-2011",
+      "loan_status": "Charged Off",
+      "count": 282
+    },
+    {
+      "issue_month": "Jul-2011",
+      "loan_status": "Fully Paid",
+      "count": 1593
+    },
+    {
+      "issue_month": "Jul-2012",
+      "loan_status": "Charged Off",
+      "count": 819
+    },
+    {
+      "issue_month": "Jul-2012",
+      "loan_status": "Fully Paid",
+      "count": 3808
+    },
+    {
+      "issue_month": "Jul-2013",
+      "loan_status": "Charged Off",
+      "count": 1854
+    },
+    {
+      "issue_month": "Jul-2013",
+      "loan_status": "Fully Paid",
+      "count": 10056
+    },
+    {
+      "issue_month": "Jul-2014",
+      "loan_status": "Charged Off",
+      "count": 5174
+    },
+    {
+      "issue_month": "Jul-2014",
+      "loan_status": "Fully Paid",
+      "count": 22373
+    },
+    {
+      "issue_month": "Jul-2015",
+      "loan_status": "Charged Off",
+      "count": 8300
+    },
+    {
+      "issue_month": "Jul-2015",
+      "loan_status": "Fully Paid",
+      "count": 32753
+    },
+    {
+      "issue_month": "Jul-2016",
+      "loan_status": "Charged Off",
+      "count": 5781
+    },
+    {
+      "issue_month": "Jul-2016",
+      "loan_status": "Fully Paid",
+      "count": 15943
+    },
+    {
+      "issue_month": "Jul-2017",
+      "loan_status": "Charged Off",
+      "count": 3599
+    },
+    {
+      "issue_month": "Jul-2017",
+      "loan_status": "Fully Paid",
+      "count": 11358
+    },
+    {
+      "issue_month": "Jul-2018",
+      "loan_status": "Charged Off",
+      "count": 529
+    },
+    {
+      "issue_month": "Jul-2018",
+      "loan_status": "Fully Paid",
+      "count": 3787
+    },
+    {
+      "issue_month": "Jun-2007",
+      "loan_status": "Fully Paid",
+      "count": 1
+    },
+    {
+      "issue_month": "Jun-2008",
+      "loan_status": "Charged Off",
+      "count": 7
+    },
+    {
+      "issue_month": "Jun-2008",
+      "loan_status": "Fully Paid",
+      "count": 59
+    },
+    {
+      "issue_month": "Jun-2009",
+      "loan_status": "Charged Off",
+      "count": 43
+    },
+    {
+      "issue_month": "Jun-2009",
+      "loan_status": "Fully Paid",
+      "count": 313
+    },
+    {
+      "issue_month": "Jun-2010",
+      "loan_status": "Charged Off",
+      "count": 166
+    },
+    {
+      "issue_month": "Jun-2010",
+      "loan_status": "Fully Paid",
+      "count": 863
+    },
+    {
+      "issue_month": "Jun-2011",
+      "loan_status": "Charged Off",
+      "count": 271
+    },
+    {
+      "issue_month": "Jun-2011",
+      "loan_status": "Fully Paid",
+      "count": 1564
+    },
+    {
+      "issue_month": "Jun-2012",
+      "loan_status": "Charged Off",
+      "count": 714
+    },
+    {
+      "issue_month": "Jun-2012",
+      "loan_status": "Fully Paid",
+      "count": 3103
+    },
+    {
+      "issue_month": "Jun-2013",
+      "loan_status": "Charged Off",
+      "count": 1761
+    },
+    {
+      "issue_month": "Jun-2013",
+      "loan_status": "Fully Paid",
+      "count": 9138
+    },
+    {
+      "issue_month": "Jun-2014",
+      "loan_status": "Charged Off",
+      "count": 3125
+    },
+    {
+      "issue_month": "Jun-2014",
+      "loan_status": "Fully Paid",
+      "count": 13061
+    },
+    {
+      "issue_month": "Jun-2015",
+      "loan_status": "Charged Off",
+      "count": 5294
+    },
+    {
+      "issue_month": "Jun-2015",
+      "loan_status": "Fully Paid",
+      "count": 20152
+    },
+    {
+      "issue_month": "Jun-2016",
+      "loan_status": "Charged Off",
+      "count": 5040
+    },
+    {
+      "issue_month": "Jun-2016",
+      "loan_status": "Fully Paid",
+      "count": 15694
+    },
+    {
+      "issue_month": "Jun-2017",
+      "loan_status": "Charged Off",
+      "count": 3602
+    },
+    {
+      "issue_month": "Jun-2017",
+      "loan_status": "Fully Paid",
+      "count": 11631
+    },
+    {
+      "issue_month": "Jun-2018",
+      "loan_status": "Charged Off",
+      "count": 781
+    },
+    {
+      "issue_month": "Jun-2018",
+      "loan_status": "Fully Paid",
+      "count": 4111
+    },
+    {
+      "issue_month": "Mar-2008",
+      "loan_status": "Charged Off",
+      "count": 40
+    },
+    {
+      "issue_month": "Mar-2008",
+      "loan_status": "Fully Paid",
+      "count": 196
+    },
+    {
+      "issue_month": "Mar-2009",
+      "loan_status": "Charged Off",
+      "count": 31
+    },
+    {
+      "issue_month": "Mar-2009",
+      "loan_status": "Fully Paid",
+      "count": 245
+    },
+    {
+      "issue_month": "Mar-2010",
+      "loan_status": "Charged Off",
+      "count": 69
+    },
+    {
+      "issue_month": "Mar-2010",
+      "loan_status": "Fully Paid",
+      "count": 668
+    },
+    {
+      "issue_month": "Mar-2011",
+      "loan_status": "Charged Off",
+      "count": 210
+    },
+    {
+      "issue_month": "Mar-2011",
+      "loan_status": "Fully Paid",
+      "count": 1238
+    },
+    {
+      "issue_month": "Mar-2012",
+      "loan_status": "Charged Off",
+      "count": 443
+    },
+    {
+      "issue_month": "Mar-2012",
+      "loan_status": "Fully Paid",
+      "count": 2471
+    },
+    {
+      "issue_month": "Mar-2013",
+      "loan_status": "Charged Off",
+      "count": 1200
+    },
+    {
+      "issue_month": "Mar-2013",
+      "loan_status": "Fully Paid",
+      "count": 7073
+    },
+    {
+      "issue_month": "Mar-2014",
+      "loan_status": "Charged Off",
+      "count": 2749
+    },
+    {
+      "issue_month": "Mar-2014",
+      "loan_status": "Fully Paid",
+      "count": 13445
+    },
+    {
+      "issue_month": "Mar-2015",
+      "loan_status": "Charged Off",
+      "count": 4779
+    },
+    {
+      "issue_month": "Mar-2015",
+      "loan_status": "Fully Paid",
+      "count": 18152
+    },
+    {
+      "issue_month": "Mar-2016",
+      "loan_status": "Charged Off",
+      "count": 10594
+    },
+    {
+      "issue_month": "Mar-2016",
+      "loan_status": "Fully Paid",
+      "count": 38343
+    },
+    {
+      "issue_month": "Mar-2017",
+      "loan_status": "Charged Off",
+      "count": 3902
+    },
+    {
+      "issue_month": "Mar-2017",
+      "loan_status": "Fully Paid",
+      "count": 13107
+    },
+    {
+      "issue_month": "Mar-2018",
+      "loan_status": "Charged Off",
+      "count": 1396
+    },
+    {
+      "issue_month": "Mar-2018",
+      "loan_status": "Fully Paid",
+      "count": 5781
+    },
+    {
+      "issue_month": "May-2008",
+      "loan_status": "Charged Off",
+      "count": 10
+    },
+    {
+      "issue_month": "May-2008",
+      "loan_status": "Fully Paid",
+      "count": 61
+    },
+    {
+      "issue_month": "May-2009",
+      "loan_status": "Charged Off",
+      "count": 42
+    },
+    {
+      "issue_month": "May-2009",
+      "loan_status": "Fully Paid",
+      "count": 277
+    },
+    {
+      "issue_month": "May-2010",
+      "loan_status": "Charged Off",
+      "count": 125
+    },
+    {
+      "issue_month": "May-2010",
+      "loan_status": "Fully Paid",
+      "count": 795
+    },
+    {
+      "issue_month": "May-2011",
+      "loan_status": "Charged Off",
+      "count": 290
+    },
+    {
+      "issue_month": "May-2011",
+      "loan_status": "Fully Paid",
+      "count": 1414
+    },
+    {
+      "issue_month": "May-2012",
+      "loan_status": "Charged Off",
+      "count": 569
+    },
+    {
+      "issue_month": "May-2012",
+      "loan_status": "Fully Paid",
+      "count": 2831
+    },
+    {
+      "issue_month": "May-2013",
+      "loan_status": "Charged Off",
+      "count": 1720
+    },
+    {
+      "issue_month": "May-2013",
+      "loan_status": "Fully Paid",
+      "count": 8630
+    },
+    {
+      "issue_month": "May-2014",
+      "loan_status": "Charged Off",
+      "count": 3321
+    },
+    {
+      "issue_month": "May-2014",
+      "loan_status": "Fully Paid",
+      "count": 14777
+    },
+    {
+      "issue_month": "May-2015",
+      "loan_status": "Charged Off",
+      "count": 5882
+    },
+    {
+      "issue_month": "May-2015",
+      "loan_status": "Fully Paid",
+      "count": 22829
+    },
+    {
+      "issue_month": "May-2016",
+      "loan_status": "Charged Off",
+      "count": 4739
+    },
+    {
+      "issue_month": "May-2016",
+      "loan_status": "Fully Paid",
+      "count": 13369
+    },
+    {
+      "issue_month": "May-2017",
+      "loan_status": "Charged Off",
+      "count": 3866
+    },
+    {
+      "issue_month": "May-2017",
+      "loan_status": "Fully Paid",
+      "count": 12285
+    },
+    {
+      "issue_month": "May-2018",
+      "loan_status": "Charged Off",
+      "count": 1202
+    },
+    {
+      "issue_month": "May-2018",
+      "loan_status": "Fully Paid",
+      "count": 5429
+    },
+    {
+      "issue_month": "Nov-2007",
+      "loan_status": "Charged Off",
+      "count": 7
+    },
+    {
+      "issue_month": "Nov-2007",
+      "loan_status": "Fully Paid",
+      "count": 30
+    },
+    {
+      "issue_month": "Nov-2008",
+      "loan_status": "Charged Off",
+      "count": 31
+    },
+    {
+      "issue_month": "Nov-2008",
+      "loan_status": "Fully Paid",
+      "count": 153
+    },
+    {
+      "issue_month": "Nov-2009",
+      "loan_status": "Charged Off",
+      "count": 83
+    },
+    {
+      "issue_month": "Nov-2009",
+      "loan_status": "Fully Paid",
+      "count": 519
+    },
+    {
+      "issue_month": "Nov-2010",
+      "loan_status": "Charged Off",
+      "count": 142
+    },
+    {
+      "issue_month": "Nov-2010",
+      "loan_status": "Fully Paid",
+      "count": 979
+    },
+    {
+      "issue_month": "Nov-2011",
+      "loan_status": "Charged Off",
+      "count": 344
+    },
+    {
+      "issue_month": "Nov-2011",
+      "loan_status": "Fully Paid",
+      "count": 1888
+    },
+    {
+      "issue_month": "Nov-2012",
+      "loan_status": "Charged Off",
+      "count": 1029
+    },
+    {
+      "issue_month": "Nov-2012",
+      "loan_status": "Fully Paid",
+      "count": 5353
+    },
+    {
+      "issue_month": "Nov-2013",
+      "loan_status": "Charged Off",
+      "count": 2266
+    },
+    {
+      "issue_month": "Nov-2013",
+      "loan_status": "Fully Paid",
+      "count": 12454
+    },
+    {
+      "issue_month": "Nov-2014",
+      "loan_status": "Charged Off",
+      "count": 4421
+    },
+    {
+      "issue_month": "Nov-2014",
+      "loan_status": "Fully Paid",
+      "count": 18536
+    },
+    {
+      "issue_month": "Nov-2015",
+      "loan_status": "Charged Off",
+      "count": 6540
+    },
+    {
+      "issue_month": "Nov-2015",
+      "loan_status": "Fully Paid",
+      "count": 26368
+    },
+    {
+      "issue_month": "Nov-2016",
+      "loan_status": "Charged Off",
+      "count": 4610
+    },
+    {
+      "issue_month": "Nov-2016",
+      "loan_status": "Fully Paid",
+      "count": 14386
+    },
+    {
+      "issue_month": "Nov-2017",
+      "loan_status": "Charged Off",
+      "count": 2529
+    },
+    {
+      "issue_month": "Nov-2017",
+      "loan_status": "Fully Paid",
+      "count": 9580
+    },
+    {
+      "issue_month": "Nov-2018",
+      "loan_status": "Charged Off",
+      "count": 24
+    },
+    {
+      "issue_month": "Nov-2018",
+      "loan_status": "Fully Paid",
+      "count": 1608
+    },
+    {
+      "issue_month": "Oct-2007",
+      "loan_status": "Charged Off",
+      "count": 10
+    },
+    {
+      "issue_month": "Oct-2007",
+      "loan_status": "Fully Paid",
+      "count": 37
+    },
+    {
+      "issue_month": "Oct-2008",
+      "loan_status": "Charged Off",
+      "count": 15
+    },
+    {
+      "issue_month": "Oct-2008",
+      "loan_status": "Fully Paid",
+      "count": 81
+    },
+    {
+      "issue_month": "Oct-2009",
+      "loan_status": "Charged Off",
+      "count": 87
+    },
+    {
+      "issue_month": "Oct-2009",
+      "loan_status": "Fully Paid",
+      "count": 458
+    },
+    {
+      "issue_month": "Oct-2010",
+      "loan_status": "Charged Off",
+      "count": 161
+    },
+    {
+      "issue_month": "Oct-2010",
+      "loan_status": "Fully Paid",
+      "count": 972
+    },
+    {
+      "issue_month": "Oct-2011",
+      "loan_status": "Charged Off",
+      "count": 313
+    },
+    {
+      "issue_month": "Oct-2011",
+      "loan_status": "Fully Paid",
+      "count": 1805
+    },
+    {
+      "issue_month": "Oct-2012",
+      "loan_status": "Charged Off",
+      "count": 962
+    },
+    {
+      "issue_month": "Oct-2012",
+      "loan_status": "Fully Paid",
+      "count": 5301
+    },
+    {
+      "issue_month": "Oct-2013",
+      "loan_status": "Charged Off",
+      "count": 2217
+    },
+    {
+      "issue_month": "Oct-2013",
+      "loan_status": "Fully Paid",
+      "count": 11910
+    },
+    {
+      "issue_month": "Oct-2014",
+      "loan_status": "Charged Off",
+      "count": 7103
+    },
+    {
+      "issue_month": "Oct-2014",
+      "loan_status": "Fully Paid",
+      "count": 28969
+    },
+    {
+      "issue_month": "Oct-2015",
+      "loan_status": "Charged Off",
+      "count": 8188
+    },
+    {
+      "issue_month": "Oct-2015",
+      "loan_status": "Fully Paid",
+      "count": 34798
+    },
+    {
+      "issue_month": "Oct-2016",
+      "loan_status": "Charged Off",
+      "count": 4255
+    },
+    {
+      "issue_month": "Oct-2016",
+      "loan_status": "Fully Paid",
+      "count": 14701
+    },
+    {
+      "issue_month": "Oct-2017",
+      "loan_status": "Charged Off",
+      "count": 2645
+    },
+    {
+      "issue_month": "Oct-2017",
+      "loan_status": "Fully Paid",
+      "count": 9277
+    },
+    {
+      "issue_month": "Oct-2018",
+      "loan_status": "Charged Off",
+      "count": 85
+    },
+    {
+      "issue_month": "Oct-2018",
+      "loan_status": "Fully Paid",
+      "count": 2065
+    },
+    {
+      "issue_month": "Sep-2007",
+      "loan_status": "Charged Off",
+      "count": 3
+    },
+    {
+      "issue_month": "Sep-2007",
+      "loan_status": "Fully Paid",
+      "count": 15
+    },
+    {
+      "issue_month": "Sep-2008",
+      "loan_status": "Charged Off",
+      "count": 5
+    },
+    {
+      "issue_month": "Sep-2008",
+      "loan_status": "Fully Paid",
+      "count": 27
+    },
+    {
+      "issue_month": "Sep-2009",
+      "loan_status": "Charged Off",
+      "count": 57
+    },
+    {
+      "issue_month": "Sep-2009",
+      "loan_status": "Fully Paid",
+      "count": 392
+    },
+    {
+      "issue_month": "Sep-2010",
+      "loan_status": "Charged Off",
+      "count": 175
+    },
+    {
+      "issue_month": "Sep-2010",
+      "loan_status": "Fully Paid",
+      "count": 912
+    },
+    {
+      "issue_month": "Sep-2011",
+      "loan_status": "Charged Off",
+      "count": 308
+    },
+    {
+      "issue_month": "Sep-2011",
+      "loan_status": "Fully Paid",
+      "count": 1759
+    },
+    {
+      "issue_month": "Sep-2012",
+      "loan_status": "Charged Off",
+      "count": 951
+    },
+    {
+      "issue_month": "Sep-2012",
+      "loan_status": "Fully Paid",
+      "count": 5136
+    },
+    {
+      "issue_month": "Sep-2013",
+      "loan_status": "Charged Off",
+      "count": 2052
+    },
+    {
+      "issue_month": "Sep-2013",
+      "loan_status": "Fully Paid",
+      "count": 10935
+    },
+    {
+      "issue_month": "Sep-2014",
+      "loan_status": "Charged Off",
+      "count": 1879
+    },
+    {
+      "issue_month": "Sep-2014",
+      "loan_status": "Fully Paid",
+      "count": 8081
+    },
+    {
+      "issue_month": "Sep-2015",
+      "loan_status": "Charged Off",
+      "count": 5180
+    },
+    {
+      "issue_month": "Sep-2015",
+      "loan_status": "Fully Paid",
+      "count": 19970
+    },
+    {
+      "issue_month": "Sep-2016",
+      "loan_status": "Charged Off",
+      "count": 4203
+    },
+    {
+      "issue_month": "Sep-2016",
+      "loan_status": "Fully Paid",
+      "count": 12706
+    },
+    {
+      "issue_month": "Sep-2017",
+      "loan_status": "Charged Off",
+      "count": 3347
+    },
+    {
+      "issue_month": "Sep-2017",
+      "loan_status": "Fully Paid",
+      "count": 10056
+    },
+    {
+      "issue_month": "Sep-2018",
+      "loan_status": "Charged Off",
+      "count": 173
+    },
+    {
+      "issue_month": "Sep-2018",
+      "loan_status": "Fully Paid",
+      "count": 2250
+    }
+  ]
+}

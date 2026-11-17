@@ -1,0 +1,206 @@
+project:
+  name: intelligent-loan-approval
+  random_seed: 42
+  deterministic: true
+
+paths:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  external_data_dir: data/external
+  raw_dataset: data/raw/loan_applications.csv
+  labeled_dataset: data/raw/train_u6lujuX_CVtuZ9i.csv
+  unlabeled_dataset: data/raw/test_Y3wMUE5_7gLdaTN.csv
+  processed_dataset: data/processed/loan_applications.csv
+  models_dir: artifacts/models
+  reports_dir: artifacts/reports
+  cv_results: artifacts/reports/model_cv_results.json
+  evaluation_report: reports/evaluation_report.md
+  quality_report: reports/data_quality_report.md
+  tuning_report: reports/hyperparameter_tuning_report.md
+  tuning_results: artifacts/reports/hyperparameter_tuning_results.json
+  business_insights_report: reports/business_insights.md
+  explainability_report: reports/explainability_report.md
+  global_importance: artifacts/reports/global_permutation_importance.csv
+  fairness_results: artifacts/reports/fairness_group_metrics.csv
+  local_explanations: artifacts/reports/local_explanations.json
+  figures_dir: reports/figures
+  log_file: logs/loan_prediction.log
+
+dataset:
+  source_url: https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset
+  target_column: Loan_Status
+  target_classes:
+    - Y
+    - N
+  identifier_columns:
+    - Loan_ID
+  categorical_domains:
+    Gender:
+      - Female
+      - Male
+    Married:
+      - "No"
+      - "Yes"
+    Dependents:
+      - "0"
+      - "1"
+      - "2"
+      - 3+
+    Education:
+      - Graduate
+      - Not Graduate
+    Self_Employed:
+      - "No"
+      - "Yes"
+    Credit_History:
+      - 0
+      - 1
+    Property_Area:
+      - Rural
+      - Semiurban
+      - Urban
+  numeric_columns:
+    - ApplicantIncome
+    - CoapplicantIncome
+    - LoanAmount
+    - Loan_Amount_Term
+  positive_numeric_columns:
+    - LoanAmount
+    - Loan_Amount_Term
+
+feature_engineering:
+  log1p_columns:
+    - ApplicantIncome
+    - CoapplicantIncome
+    - LoanAmount
+    - Total_Income
+
+training:
+  test_size: 0.2
+  cv_folds: 5
+  model_version: "1.0.0"
+  optimized_model_version: "1.1.0"
+
+optimization:
+  n_iter: 12
+  scoring:
+    primary: balanced_accuracy
+    secondary: roc_auc
+  parameter_distributions:
+    estimator__n_estimators:
+      - 150
+      - 300
+      - 500
+    estimator__max_depth:
+      - null
+      - 10
+      - 20
+    estimator__min_samples_leaf:
+      - 1
+      - 2
+      - 4
+    estimator__max_features:
+      - sqrt
+      - 0.5
+    estimator__class_weight:
+      - balanced
+      - balanced_subsample
+
+explainability:
+  model_name: random_forest
+  model_version: "1.1.0"
+  permutation_repeats: 5
+  fairness_attributes:
+    - Gender
+    - Education
+    - Married
+  fairness_min_group_size: 10
+  shap_background_rows: 20
+  local_cases: 2
+
+models:
+  candidates:
+    - logistic_regression
+    - decision_tree
+    - random_forest
+    - gradient_boosting
+  parameters:
+    logistic_regression:
+      max_iter: 1000
+      solver: lbfgs
+      class_weight: balanced
+    decision_tree:
+      max_depth: null
+      min_samples_leaf: 2
+      class_weight: balanced
+    random_forest:
+      n_estimators: 300
+      max_features: sqrt
+      min_samples_leaf: 2
+      class_weight: balanced
+      n_jobs: 1
+    gradient_boosting:
+      n_estimators: 100
+      learning_rate: 0.05
+      max_depth: 2
+      subsample: 1.0
+      class_weight: balanced_sample_weight
+
+streamlit:
+  page_title: Loan Approval Decision Support
+  layout: wide
+
+calibration:
+  enabled: true
+  methods:
+    - sigmoid
+    - isotonic
+  cv_folds: 3
+  positive_label: Y
+  minimum_samples_for_isotonic: 200
+  comparison_metric: brier_score
+
+thresholds:
+  enabled: true
+  metric: f1
+  default_threshold: 0.5
+  candidate_thresholds:
+    - 0.35
+    - 0.40
+    - 0.45
+    - 0.50
+    - 0.55
+    - 0.60
+    - 0.65
+  positive_label: Y
+  negative_label: N
+
+default_risk:
+  enabled: true
+  dataset_name: lendingclub
+  target_name: loan_status
+  default_label: Charged Off
+  non_default_label: Fully Paid
+  test_start_year: 2016
+  max_train_rows: 100000
+  max_test_rows: 40000
+  cv_folds: 3
+  calibration_method: sigmoid
+  risk_category_thresholds:
+    low_risk_max: 0.10
+    moderate_risk_max: 0.25
+    high_risk_max: 0.50
+  excluded_statuses:
+    - Current
+    - Late
+    - In Grace Period
+  raw_data_dir: data/default_risk/raw
+  processed_data_dir: data/default_risk/processed
+  primary_dataset_url: https://www.kaggle.com/datasets/wordsforthewise/lending-club
+  alternative_dataset_url: https://www.kaggle.com/competitions/GiveMeSomeCredit
+  training_ready: false
+
+logging:
+  level: INFO
+  format: json
+  text_format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"

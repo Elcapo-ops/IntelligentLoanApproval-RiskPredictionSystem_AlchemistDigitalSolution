@@ -1,0 +1,77 @@
+# Lending Policy Configuration
+#
+# IMPORTANT: All values below are illustrative defaults for development only.
+# They are NOT banking standards, regulatory requirements, or production values.
+# Replace every threshold with your institution's approved lending policy before
+# any production use.
+#
+# Policy version must be updated whenever any value changes.
+
+policy_version: "1.0.0-dev"
+policy_status: "development"
+last_updated: "2026-06-10"
+change_summary: "Initial development policy with illustrative values"
+
+# ---------------------------------------------------------------------------
+# A. Applicant Eligibility Rules
+# ---------------------------------------------------------------------------
+eligibility:
+  minimum_age: 18
+  required_application_fields:
+    - annual_income
+    - requested_loan_amount
+    - loan_term_months
+  minimum_employment_months: 6
+  required_home_ownership: true
+  required_verification_status: true
+  eligible_loan_purposes:
+    - debt_consolidation
+    - home_improvement
+    - major_purchase
+    - small_business
+    - medical
+    - car
+    - educational
+  eligible_residency_states: null  # null means all states eligible
+
+# ---------------------------------------------------------------------------
+# B. Financial Rules
+# ---------------------------------------------------------------------------
+financial:
+  minimum_verified_monthly_income: 2000.0
+  maximum_loan_amount: 100000.0
+  maximum_loan_to_income: 5.0
+  maximum_payment_to_income_percent: 28.0
+  maximum_dti_percent: 40.0
+  minimum_disposable_income: 500.0
+
+# ---------------------------------------------------------------------------
+# C. Credit Risk Rules
+# ---------------------------------------------------------------------------
+credit_risk:
+  maximum_default_probability: 0.25
+  risk_categories_restricted:
+    - "Very High Risk"
+  manual_review_if_model_unavailable: true
+  manual_review_if_probability_missing: true
+
+# ---------------------------------------------------------------------------
+# D. Loan-Specific Rules
+# ---------------------------------------------------------------------------
+loan:
+  minimum_term_months: 12
+  maximum_term_months: 84
+  minimum_loan_amount: 1000.0
+  maximum_interest_rate: 36.0
+  minimum_interest_rate: 0.0
+
+# ---------------------------------------------------------------------------
+# Rule Precedence (documented, not used for computation directly)
+# ---------------------------------------------------------------------------
+precedence:
+  1: "mandatory_rejection"
+  2: "mandatory_manual_review"
+  3: "eligibility"
+  4: "financial"
+  5: "credit_risk"
+  6: "warning"

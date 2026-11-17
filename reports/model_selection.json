@@ -1,0 +1,12 @@
+{
+  "selected_model": "random_forest",
+  "selected_version": "1.0.0",
+  "selection_metric": "balanced_accuracy_mean",
+  "selection_tiebreaker": "roc_auc_mean",
+  "selection_cv_scores": {
+    "balanced_accuracy_mean": 0.6844951712028096,
+    "roc_auc_mean": 0.7787006617765064
+  },
+  "selection_dataset_hash": "8d7f4a99e8118bf51bbe2f8437ea1b9d923f7723e4f2635056c52832af353a21",
+  "holdout_evaluated_after_selection": true
+}
