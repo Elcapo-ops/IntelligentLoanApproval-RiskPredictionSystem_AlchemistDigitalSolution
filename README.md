@@ -425,7 +425,7 @@ python -m pip check
 ```
 
 ### you can find the trained models by following this link
-https://drive.google.com/drive/folders/15c08gm0BRC4WUC7Z20gjRTY0fw5VSQ7x?usp=drive_link
+https://drive.google.com/drive/folders/15c08gm0BRC4WUC7Z20gjRTY0fw5VSQ7x?usp=sharing
 
 
 
