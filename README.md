@@ -462,7 +462,8 @@ python scripts/train_all_models.py --skip-default-risk
 # Skip approval training
 python scripts/train_all_models.py --skip-approval
 ```
-
+### Or you can find the trained models by following this link
+  https://drive.google.com/drive/folders/15c08gm0BRC4WUC7Z20gjRTY0fw5VSQ7x?usp=drive_link
 #### 6. Run the app
 
 ```powershell
