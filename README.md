@@ -424,7 +424,14 @@ python -m pip install -e .
 python -m pip check
 ```
 
-#### 4. Download datasets (must be done manually)
+### you can find the trained models by following this link
+https://drive.google.com/drive/folders/15c08gm0BRC4WUC7Z20gjRTY0fw5VSQ7x?usp=drive_link
+
+
+
+
+
+#### 4. Or you can Download datasets (must be done manually)
 
 The two Kaggle CSVs and the LendingClub archive are **git-ignored** and are
 not in the repository. Download each dataset from the links below and place
@@ -462,8 +469,6 @@ python scripts/train_all_models.py --skip-default-risk
 # Skip approval training
 python scripts/train_all_models.py --skip-approval
 ```
-### Or you can find the trained models by following this link
-  https://drive.google.com/drive/folders/15c08gm0BRC4WUC7Z20gjRTY0fw5VSQ7x?usp=drive_link
 #### 6. Run the app
 
 ```powershell
